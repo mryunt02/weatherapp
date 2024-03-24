@@ -1,13 +1,18 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(https://s3-alpha-sig.figma.com/img/7162/d32f/9b6c511be331e56d0e881ffda00b4d57?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=f-Af95Q~zHHyZ8eotMbn0WEpHMXneX45HiMZJ2mPDXye-JMA2TPjV26cUVQWQdfzzxOIWEyJmTplD6lMmPvgnuMXfbkjvkOSlBvvh6XfnKZ7x8nHsMzCVuw1B1cikf9Be5N2xP6b2n-pmg9wWkfy3BjMBiGSWV28Tev1aGrLXmbACVQ4R6q13mOQ6inPUL62jFpPgHkJGZiC7JRItIJmEUCMgSZtX1XNc1O0TjCwHsiIAebFjyHBQ7LToUQPfi~QBlnzsBjXHyN7S-yz4pBltBx52X4L6bjL73fLmd-uDXEKkzo6FIEdDVC-hVxVt2mgpR6H7KyYAR5beVI-e7xHTA__);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
