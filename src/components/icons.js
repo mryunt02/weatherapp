@@ -15,22 +15,33 @@ import icon11n from "../icons/11n.png";
 import icon13d from "../icons/13d.png";
 import icon50d from "../icons/50d.png";
 import icon50n from "../icons/50n.png";
+import clearday from "../dayimgs/clearday.png";
+import clearnight from "../dayimgs/clearnight.png";
+import cloudyday from "../dayimgs/cloudyday.png";
+import cloudynight from "../dayimgs/cloudynight.png";
+import fewcloudsday from "../dayimgs/few-cloudsday.png";
+import fewcloudsnight from "../dayimgs/few-cloudsnight.png";
+import rainday from "../dayimgs/rainday.png";
+import rainnight from "../dayimgs/rainnight.png";
+import stormday from "../dayimgs/storm-day.png";
+import stormnight from "../dayimgs/storm-night.png";
+
 export const icons = {
-  "01d": icon01d,
-  "01n": icon01n,
-  "02d": icon02d,
-  "02n": icon02n,
-  "03d": icon03d,
-  "03n": icon03n,
-  "04d": icon04d,
-  "04n": icon04n,
-  "09d": icon09d,
-  "09n": icon09n,
-  "10d": icon10d,
-  "10n": icon10n,
-  "11d": icon11d,
-  "11n": icon11n,
-  "13d": icon13d,
-  "50d": icon50d,
-  "50n": icon50n,
+  "01d": [icon01d, clearday],
+  "01n": [icon01n, clearnight],
+  "02d": [icon02d, fewcloudsday],
+  "02n": [icon02n, fewcloudsnight],
+  "03d": [icon03d, fewcloudsday],
+  "03n": [icon03n, fewcloudsnight],
+  "04d": [icon04d, cloudyday],
+  "04n": [icon04n, cloudynight],
+  "09d": [icon09d, rainday],
+  "09n": [icon09n, rainnight],
+  "10d": [icon10d, rainday],
+  "10n": [icon10n, rainnight],
+  "11d": [icon11d, stormday],
+  "11n": [icon11n, stormnight],
+  "13d": [icon13d, rainday],
+  "50d": [icon50d, clearday],
+  "50n": [icon50n, clearnight],
 };

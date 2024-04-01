@@ -12,6 +12,7 @@ function App() {
   const navigate = useNavigate();
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
+  const [errorMessage, setErrorMessage] = useState(null);
 
   const handleSearchChange = (data) => {
     const [latitude, longitude] = data.value.split(" ");
@@ -28,9 +29,19 @@ function App() {
         setCurrentWeather({ city: data.label, ...weatherResponse });
         setForecast({ city: data.label, ...forecastResponse });
         navigate(`/${weatherResponse.name}`);
+        setErrorMessage(null);
       })
       .catch((error) => {
         console.error("Error:", error);
+        if (error.response && error.response.status === 429) {
+          setErrorMessage(
+            "You have exceeded the number of requests allowed by the API. Please try again later."
+          );
+        } else {
+          setErrorMessage(
+            "An error occurred while fetching data. Please try again later."
+          );
+        }
       });
   };
 
@@ -58,6 +69,11 @@ function App() {
           element={<CurrentWeather data={currentWeather} forecast={forecast} />}
         />
       </Routes>
+      {errorMessage && (
+        <div style={{ marginTop: "20px" }}>
+          <p style={{ color: "#FAFAFA" }}>{errorMessage}</p>
+        </div>
+      )}
     </div>
   );
 }

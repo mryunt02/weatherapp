@@ -32,7 +32,6 @@ const Search = ({ onSearch }) => {
           console.error("Error: response.data is not an array");
           return { options: [] };
         }
-        console.log(response.data);
         const options = response.data.map((city) => {
           return {
             label: `${city.city}`,

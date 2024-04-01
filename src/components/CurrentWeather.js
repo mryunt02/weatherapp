@@ -6,8 +6,6 @@ import Forecast from "./Forecast";
 import { Link } from "react-router-dom";
 
 function CurrentWeather({ data, forecast }) {
-  console.log(data);
-
   const WEEK_DAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   const today = new Date();
   const dayInAWeek = today.getDay();
@@ -33,10 +31,19 @@ function CurrentWeather({ data, forecast }) {
         <h3 style={{ color: "rgb(191, 191, 212)" }}>Go to home</h3>
       </Link>
       <div className="city-card">
-        <div className="city-info">
+        <div
+          className="city-info"
+          style={{
+            background: `url(${icons[data?.weather[0].icon][1]})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        >
           <div className="city-day">
             <h3 className="info">
-              {data?.name}, {data?.sys.country}
+              {data?.name ?? "Default name"},{" "}
+              {data?.sys.country ?? "Default country"}
             </h3>
             <p className="info" style={{ marginTop: "-20px" }}>
               {date}
@@ -62,7 +69,7 @@ function CurrentWeather({ data, forecast }) {
               </p>
             </div>
             <div style={{ display: "flex", alignSelf: "flex-end" }}>
-              <img src={icons[data?.weather[0].icon]} alt="Weather icon" />
+              <img src={icons[data?.weather[0].icon][0]} alt="Weather icon" />
             </div>
           </div>
         </div>

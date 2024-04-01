@@ -6,7 +6,7 @@ const Forecast = ({ day, iconNo, tempMax, tempMin }) => {
     <div>
       <h3 style={{ marginTop: "20px", color: "#BFBFD4" }}>{day}</h3>
       <img
-        src={icons[iconNo] || icon}
+        src={icons[iconNo[0]] || icon}
         alt=""
         style={{ width: "60px", marginBottom: "-10px", marginTop: "-10px" }}
       />
