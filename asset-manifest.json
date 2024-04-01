@@ -1,16 +1,26 @@
 {
   "files": {
-    "main.css": "/weatherapp/static/css/main.b3c00eef.css",
-    "main.js": "/weatherapp/static/js/main.ed40f24c.js",
+    "main.css": "/weatherapp/static/css/main.0bca875f.css",
+    "main.js": "/weatherapp/static/js/main.57a5f00c.js",
     "static/js/453.0ccb7fb4.chunk.js": "/weatherapp/static/js/453.0ccb7fb4.chunk.js",
+    "static/media/cloudyday.png": "/weatherapp/static/media/cloudyday.3807f577d70e8fc694bf.png",
+    "static/media/few-cloudsday.png": "/weatherapp/static/media/few-cloudsday.e2cd2511749cc24f24e4.png",
+    "static/media/rainday.png": "/weatherapp/static/media/rainday.c7b487318ba46a454fb0.png",
+    "static/media/storm-day.png": "/weatherapp/static/media/storm-day.70e3c1079f140a7eae35.png",
+    "static/media/rainnight.png": "/weatherapp/static/media/rainnight.71e1c51b0d4b88ecf19e.png",
+    "static/media/few-cloudsnight.png": "/weatherapp/static/media/few-cloudsnight.f9090095d30b62f855ed.png",
+    "static/media/cloudynight.png": "/weatherapp/static/media/cloudynight.f45f6324ded36e807430.png",
+    "static/media/clearday.png": "/weatherapp/static/media/clearday.a0d2910c01c02f248516.png",
+    "static/media/clearnight.png": "/weatherapp/static/media/clearnight.641baed19fd7b7f6f47a.png",
+    "static/media/storm-night.png": "/weatherapp/static/media/storm-night.d59bf3cd48f693ba0cda.png",
     "static/media/png": "/weatherapp/static/media/9b6c511be331e56d0e881ffda00b4d57.7818684120189dea8513.png",
     "index.html": "/weatherapp/index.html",
-    "main.b3c00eef.css.map": "/weatherapp/static/css/main.b3c00eef.css.map",
-    "main.ed40f24c.js.map": "/weatherapp/static/js/main.ed40f24c.js.map",
+    "main.0bca875f.css.map": "/weatherapp/static/css/main.0bca875f.css.map",
+    "main.57a5f00c.js.map": "/weatherapp/static/js/main.57a5f00c.js.map",
     "453.0ccb7fb4.chunk.js.map": "/weatherapp/static/js/453.0ccb7fb4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3c00eef.css",
-    "static/js/main.ed40f24c.js"
+    "static/css/main.0bca875f.css",
+    "static/js/main.57a5f00c.js"
   ]
 }
