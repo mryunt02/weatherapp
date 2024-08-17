@@ -1,21 +1,22 @@
-import "./App.css";
-import Welcome from "./components/Welcome";
-import Search from "./components/Search";
-import CurrentWeather from "./components/CurrentWeather";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { WEATHER_API_URL, WEATHER_API_KEY } from "./cityApi";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import React from 'react';
+import './App.css';
+import Welcome from './components/Welcome.tsx';
+import Search from './components/Search.tsx';
+import CurrentWeather from './components/CurrentWeather';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { WEATHER_API_URL, WEATHER_API_KEY } from './cityApi.ts';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 function App() {
   const navigate = useNavigate();
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
-  const [errorMessage, setErrorMessage] = useState(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const handleSearchChange = (data) => {
-    const [latitude, longitude] = data.value.split(" ");
+    const [latitude, longitude] = data.value.split(' ');
     const currentWeather = axios.get(
       `${WEATHER_API_URL}weather?lat=${latitude}&lon=${longitude}&appid=${WEATHER_API_KEY}`
     );
@@ -32,28 +33,28 @@ function App() {
         setErrorMessage(null);
       })
       .catch((error) => {
-        console.error("Error:", error);
+        console.error('Error:', error);
         if (error.response && error.response.status === 429) {
           setErrorMessage(
-            "You have exceeded the number of requests allowed by the API. Please try again later."
+            'You have exceeded the number of requests allowed by the API. Please try again later.'
           );
         } else {
           setErrorMessage(
-            "An error occurred while fetching data. Please try again later."
+            'An error occurred while fetching data. Please try again later.'
           );
         }
       });
   };
 
   return (
-    <div className="App">
+    <div className='App'>
       <Routes>
         <Route
-          path="/weatherapp"
+          path='/weatherapp'
           element={
             <>
               <header>
-                <h1 style={{ color: "#FAFAFA", marginTop: "40px" }}>
+                <h1 style={{ color: '#FAFAFA', marginTop: '40px' }}>
                   iWeather
                 </h1>
               </header>
@@ -65,13 +66,13 @@ function App() {
 
         {/* Add this line if you want a specific component for the root path */}
         <Route
-          path="/:id"
+          path='/:id'
           element={<CurrentWeather data={currentWeather} forecast={forecast} />}
         />
       </Routes>
       {errorMessage && (
-        <div style={{ marginTop: "20px" }}>
-          <p style={{ color: "#FAFAFA" }}>{errorMessage}</p>
+        <div style={{ marginTop: '20px' }}>
+          <p style={{ color: '#FAFAFA' }}>{errorMessage}</p>
         </div>
       )}
     </div>
