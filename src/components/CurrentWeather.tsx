@@ -37,8 +37,8 @@ interface ForecastData {
 }
 
 interface CurrentWeatherProps {
-  data: WeatherData;
-  forecast: ForecastData;
+  data: WeatherData | null;
+  forecast: ForecastData | null;
 }
 
 const CurrentWeather: React.FC<CurrentWeatherProps> = ({ data, forecast }) => {
