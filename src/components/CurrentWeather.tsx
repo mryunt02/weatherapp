@@ -1,5 +1,4 @@
 import React from 'react';
-import './CurrentWeather.css';
 import WeatherInfo from './WeatherInfo.tsx';
 import { toCelcius } from './toCelcius.ts';
 import { icons } from './icons.ts';
@@ -16,24 +15,22 @@ interface WeatherData {
     temp_min: number;
     temp_max: number;
   };
-  weather: Array<{
+  weather: {
+    icon: string;
     description: string;
-    icon: string;
-  }>;
-}
-
-interface ForecastItem {
-  main: {
-    temp_max: number;
-    temp_min: number;
-  };
-  weather: Array<{
-    icon: string;
-  }>;
+  }[];
 }
 
 interface ForecastData {
-  list: ForecastItem[];
+  list: {
+    main: {
+      temp_min: number;
+      temp_max: number;
+    };
+    weather: {
+      icon: string;
+    }[];
+  }[];
 }
 
 interface CurrentWeatherProps {
@@ -57,12 +54,18 @@ const CurrentWeather: React.FC<CurrentWeatherProps> = ({ data, forecast }) => {
   };
 
   const date = `${today.toLocaleDateString('en-US', options)}`;
+
+  if (!data || !forecast) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       <Link
         to='/weatherapp'
         style={{ textDecoration: 'none', marginTop: '50px' }}
       >
+        {' '}
         <h3 style={{ color: 'rgb(191, 191, 212)' }}>Go to home</h3>
       </Link>
       <div className='city-card'>
