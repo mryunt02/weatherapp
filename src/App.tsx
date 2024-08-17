@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import Welcome from './components/Welcome.tsx';
 import Search from './components/Search.tsx';
-import CurrentWeather from './components/CurrentWeather';
+import CurrentWeather from './components/CurrentWeather.tsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { WEATHER_API_URL, WEATHER_API_KEY } from './cityApi.ts';
 import { useState } from 'react';
